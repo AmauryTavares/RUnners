@@ -35,7 +35,7 @@ public class TileManager : MonoBehaviour
     {
         if (playerTransform.position.y - tileLength > ySpawn - (numberOfTiles * tileLength)) // when the last tile is passed spawn new tile
         {
-            SpawnTile(0);
+            SpawnTile(Random.Range(0, tilePrefabs.Length));
             DeleteTile();
         }
     }
