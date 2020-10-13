@@ -4,29 +4,50 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    private CharacterController controller;
     private Vector3 direction;
     public float speed;
 
     private int desiredLane = 1; // 0 = left, 1 = middle, 2 = right
     public float laneDistance; // Distance between each two lanes
 
+    private int STOP_STATE = 0;
+    private int PLAY_STATE = 1;
+    private int PAUSE_STATE = 2;
+
+    public GameManager gameManager;
+
     // Start is called before the first frame update
     void Start()
     {
-        controller = GetComponent<CharacterController>();
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        direction.y = speed;
-        HandlerInputKeyboard();
+        if (gameManager.GetGameState() == PLAY_STATE)
+        {
+            direction.y = speed;
+            HandlerInputKeyboard();
+
+            if (gameManager.GetGameState() == PLAY_STATE)
+            {
+                transform.position += direction * Time.deltaTime;
+            }
+        }
     }
 
-    private void FixedUpdate()
+    void OnCollisionEnter2D(Collision2D col)
     {
-        controller.Move(direction * Time.deltaTime);// Update movement forward
+        if (col.collider.tag == "Enemy")
+        {
+            PlayerDie();
+        }
+
+        if (col.collider.tag == "Restaurant")
+        {
+            gameManager.NextLevel();
+        }
     }
 
     private void HandlerInputKeyboard()
@@ -76,12 +97,27 @@ public class PlayerController : MonoBehaviour
 
             if (moverDir.sqrMagnitude < diff.sqrMagnitude)
             {
-                controller.Move(moverDir);
+                transform.position += moverDir;
             } else
             {
-                controller.Move(diff);
+                transform.position += diff;
             }
         }
     }
 
+    public void PlayerDie()
+    {
+        if (gameManager.playerLifes > 1)
+        {
+            desiredLane = 1;
+            transform.position = new Vector3();
+        }
+
+        gameManager.PlayerDie();
+    }
+
+    public float GetPlayerPosition()
+    {
+        return gameObject.transform.position.y;
+    }
 }
