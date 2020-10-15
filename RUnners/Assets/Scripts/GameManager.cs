@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public int playerLifes;
     public float[] goalLevel;
     public int startLevel;
 
@@ -33,12 +32,13 @@ public class GameManager : MonoBehaviour
     {
         if (gameState == START_STATE)// if game state is start
         {
-            if (playerLifes > 0)
+            if (playerController.GetPlayerLifes() > 0)
             {
                 StartGame();
             }
             else
             {
+                SetGameOverGame();
                 GameOver();
             }
         }
@@ -82,22 +82,23 @@ public class GameManager : MonoBehaviour
 
     public void PlayerDie()
     {
-        playerLifes--; 
-
-        if (playerLifes > 0) // Reset map only if player lifes > 0
+        if (playerController.GetPlayerLifes() > 0) // Reset map only if player lifes > 0
         {
-            tileManager.ClearTiles();
-            SetStartGame();
-        } else
-        {
-            SetGameOverGame();
+            tileManager.ResetMap();
         }
+
+        SetStartGame();
     }
 
     public void SpawnEndTile() // Spawn last tile
     {
         tileManager.SpawnEndTile();
         endTileSpawned = true;
+    }
+
+    public void ActiveEnemies(bool value)
+    {
+        tileManager.SetActiveGenerateEnemy(value);
     }
 
     public void NextLevel()// Go to next level

@@ -6,6 +6,12 @@ TagManager:
   tags:
   - Enemy
   - Restaurant
+  - Puddle
+  - Dog
+  - Energy Drink
+  - Protein Bar
+  - Acai Cup
+  - University Bus
   layers:
   - Default
   - TransparentFX

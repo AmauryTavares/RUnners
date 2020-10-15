@@ -264,9 +264,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e79247976e5b70e4eb9f9d6c388f108b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
+  playerLifes: 3
+  speed: 4
+  cooldownStamina: 3
+  stamina: 100
   laneDistance: 3
   gameManager: {fileID: 1572703322}
+  timeEnergyDrink: 10
+  cameraController: {fileID: 1644779047}
 --- !u!50 &43626792
 Rigidbody2D:
   serializedVersion: 4
@@ -317,8 +322,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58852cb7c57aed040ac55e43d64b3699, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tilePrefabs:
-  - {fileID: 6434710563439216646, guid: bf39898c94d70ed4ba793d2dc0aeff4c, type: 3}
+  enemyPrefabs:
+  - {fileID: 8721900195058284528, guid: 42fef08aeffb28c4aaec51f38772870b, type: 3}
   - {fileID: 1611773690449972221, guid: 9eacea25880360a439aa3c8f5f0b325b, type: 3}
   - {fileID: 2181091735396497488, guid: b6bfc7444c43f0448807f9cad82054ef, type: 3}
   - {fileID: 1585019600351855026, guid: 5b2d962dfa4a87c4f853d93ec331f041, type: 3}
@@ -331,9 +336,13 @@ MonoBehaviour:
   - {fileID: 7240657514654584969, guid: c662b67525091b04ca144cc389c207d0, type: 3}
   - {fileID: 6928966545220054301, guid: 77f15d03ab52a454fbfe2c2a6be7f505, type: 3}
   - {fileID: 7123733994530810471, guid: 5d5103fa8262a0e428f443cc0bc335be, type: 3}
-  - {fileID: 8721900195058284528, guid: 42fef08aeffb28c4aaec51f38772870b, type: 3}
+  tileClean: {fileID: 6434710563439216646, guid: bf39898c94d70ed4ba793d2dc0aeff4c,
+    type: 3}
   tileRestaurant: {fileID: 3133075783533775212, guid: 38f05fa12fff2a04ba5387e6e049e4b2,
     type: 3}
+  dogEnemy: {fileID: 1412778146735986588, guid: 4cb7cb0e43d205d48a45e746f0ec776a,
+    type: 3}
+  cooldownSpawnDog: 100
   tileLength: 10
   numberOfTiles: 3
   playerTransform: {fileID: 43626788}
@@ -395,9 +404,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3ed94b2a0d5e3149b6ce7c849a74364, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerLifes: 3
   goalLevel:
-  - 50
+  - 500
   startLevel: 1
   tileManager: {fileID: 511845761}
   playerController: {fileID: 43626791}
