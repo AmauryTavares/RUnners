@@ -133,8 +133,8 @@ GameObject:
   - component: {fileID: 43626787}
   - component: {fileID: 43626789}
   - component: {fileID: 43626791}
-  - component: {fileID: 43626790}
   - component: {fileID: 43626792}
+  - component: {fileID: 43626790}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -181,7 +181,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: -636201310591049115, guid: 1db6dfd95205d664c83a14e66953724b,
+  m_Sprite: {fileID: 2084983644866081453, guid: 414fbda4e416e664c8202f21ed06709a,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -200,13 +200,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 43626786}
-  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -0, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &43626789
 Animator:
   serializedVersion: 3
@@ -243,14 +243,14 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.3, y: 0.47}
+    oldSize: {x: 1.4, y: 0.8}
     newSize: {x: 0.3, y: 0.47}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.3, y: 0.47}
+  m_Size: {x: 1.4, y: 0.8}
   m_EdgeRadius: 0
 --- !u!114 &43626791
 MonoBehaviour:

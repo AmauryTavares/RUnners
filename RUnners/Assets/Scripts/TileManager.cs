@@ -54,7 +54,7 @@ public class TileManager : MonoBehaviour
 
             if (activeDog == null )
             {
-                spawnDog(); // spawn dog
+                //spawnDog(); // spawn dog
             }
         } else
         {

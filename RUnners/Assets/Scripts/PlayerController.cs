@@ -48,6 +48,14 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (gameManager.GetGameState() == PAUSE_STATE) 
+        {
+            gameObject.GetComponent<Animator>().speed = 0; // stop animation
+        } else
+        {
+            gameObject.GetComponent<Animator>().speed = 1; // play animation
+        }
+
         if (gameManager.GetGameState() == PLAY_STATE)
         {
             direction.y = currentSpeed;
@@ -234,7 +242,7 @@ public class PlayerController : MonoBehaviour
 
     private void CalculateNextPosition(int desiredLane) //Calculate and update next position
     {
-        Vector3 targetPosition = transform.position.y * transform.right;
+        Vector3 targetPosition = transform.position.y * new Vector3(0, 1, 0);
         
         if (desiredLane == 0) // Update target position to left
         {
@@ -244,9 +252,7 @@ public class PlayerController : MonoBehaviour
         {
             targetPosition += Vector3.right * laneDistance;
         }
-        print("target" + targetPosition);
-        print("position " + transform.position);
-        print("right " + transform.right);
+        
         if (transform.position == targetPosition)
         {
             return;
