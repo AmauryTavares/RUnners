@@ -278,6 +278,7 @@ public class PlayerController : MonoBehaviour
             desiredLane = 1;
             transform.position = new Vector3();
             currentSpeed = speed;
+            currentStamina = stamina;
             activeEnergyDrink = false;
             playerRun = false;
         }
