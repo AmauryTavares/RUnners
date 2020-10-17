@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -31,6 +32,11 @@ public class PlayerController : MonoBehaviour
     private int STOP_STATE = 0;
     private int PLAY_STATE = 1;
     private int PAUSE_STATE = 2;
+    private int GAMEOVER_STATE = 4;
+
+    public Image staminaBar;
+
+    public GameObject[] lifesIMG;
 
 
     // Start is called before the first frame update
@@ -48,10 +54,13 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (gameManager.GetGameState() == PAUSE_STATE) 
+        staminaBar.fillAmount = currentStamina / stamina;
+
+        if (gameManager.GetGameState() == PAUSE_STATE || gameManager.GetGameState() == GAMEOVER_STATE)
         {
             gameObject.GetComponent<Animator>().speed = 0; // stop animation
-        } else
+        }
+        else
         {
             gameObject.GetComponent<Animator>().speed = 1; // play animation
         }
@@ -67,7 +76,7 @@ public class PlayerController : MonoBehaviour
 
             if (gameManager.GetGameState() == PLAY_STATE)
             {
-                
+
                 if (activeUniversityBus == true) // active university bus
                 {
                     transform.GetComponent<BoxCollider2D>().enabled = false; // disable player collider
@@ -83,7 +92,8 @@ public class PlayerController : MonoBehaviour
                         activeUniversityBus = false;
                     }
 
-                } else // Update movement of player
+                }
+                else // Update movement of player
                 {
                     Vector3 movement = direction * Time.deltaTime;
 
@@ -145,6 +155,8 @@ public class PlayerController : MonoBehaviour
         {
             gameManager.NextLevel();
         }
+
+        LifesUpdate();
     }
 
 
@@ -198,6 +210,7 @@ public class PlayerController : MonoBehaviour
             gameManager.ActiveEnemies(false);
             activeUniversityBus = true;
         }
+        LifesUpdate();
     }
 
     private void HandlerInputKeyboard()
@@ -227,7 +240,8 @@ public class PlayerController : MonoBehaviour
                 desiredLane = 2;
             }
 
-        } else if (Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A))// Handle input left
+        }
+        else if (Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A))// Handle input left
         {
             desiredLane--;
 
@@ -243,7 +257,7 @@ public class PlayerController : MonoBehaviour
     private void CalculateNextPosition(int desiredLane) //Calculate and update next position
     {
         Vector3 targetPosition = transform.position.y * new Vector3(0, 1, 0);
-        
+
         if (desiredLane == 0) // Update target position to left
         {
             targetPosition += Vector3.left * laneDistance;
@@ -252,11 +266,12 @@ public class PlayerController : MonoBehaviour
         {
             targetPosition += Vector3.right * laneDistance;
         }
-        
+
         if (transform.position == targetPosition)
         {
             return;
-        } else
+        }
+        else
         {
             Vector3 diff = targetPosition - transform.position;
             Vector3 moverDir = diff.normalized * 25 * Time.deltaTime;
@@ -264,7 +279,8 @@ public class PlayerController : MonoBehaviour
             if (moverDir.sqrMagnitude < diff.sqrMagnitude)
             {
                 transform.position += moverDir;
-            } else
+            }
+            else
             {
                 transform.position += diff;
             }
@@ -273,6 +289,7 @@ public class PlayerController : MonoBehaviour
 
     public void PlayerDie()
     {
+       
         if (currentPlayerLifes > 1)
         {
             desiredLane = 1;
@@ -282,10 +299,11 @@ public class PlayerController : MonoBehaviour
             activeEnergyDrink = false;
             playerRun = false;
         }
-
         currentPlayerLifes--;
 
+        LifesUpdate();
         gameManager.PlayerDie();
+        
     }
 
     public float GetPlayerPosition()
@@ -297,4 +315,21 @@ public class PlayerController : MonoBehaviour
     {
         return currentPlayerLifes;
     }
+
+    public void LifesUpdate()
+    {
+        for (int i = lifesIMG.Length-1; i >= 0; i--)
+        {
+            if (i < currentPlayerLifes)
+            {
+                lifesIMG[i].SetActive(true);
+            }
+            else
+            {
+                lifesIMG[i].SetActive(false);
+            }
+        }
+
+    }
 }
+

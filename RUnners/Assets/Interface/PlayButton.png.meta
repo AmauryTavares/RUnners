@@ -1,0 +1,383 @@
+fileFormatVersion: 2
+guid: 68c7e2945aa3b314aa76a2dea0bdef3d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1958676783162264248
+    second: PlayButton_0
+  - first:
+      213: 7928353779462949069
+    second: PlayButton_1
+  - first:
+      213: -3248335609562203678
+    second: PlayButton_2
+  - first:
+      213: -2922150867334361037
+    second: PlayButton_3
+  - first:
+      213: 3502773657383976437
+    second: PlayButton_4
+  - first:
+      213: -502551152378373709
+    second: PlayButton_5
+  - first:
+      213: -931351564760199206
+    second: PlayButton_6
+  - first:
+      213: -4181116182464302184
+    second: PlayButton_7
+  - first:
+      213: -5952645124595385091
+    second: PlayButton_8
+  - first:
+      213: 6264984548441824026
+    second: PlayButton_9
+  - first:
+      213: 8968115519190733520
+    second: PlayButton_10
+  - first:
+      213: 7266447043686282228
+    second: PlayButton_11
+  - first:
+      213: 4760925173788553629
+    second: PlayButton_12
+  - first:
+      213: -6539201712079997610
+    second: PlayButton_13
+  - first:
+      213: -8450838287734447463
+    second: PlayButton_14
+  - first:
+      213: -4777731251800034770
+    second: PlayButton_15
+  - first:
+      213: -6349065959532173141
+    second: PlayButton_16
+  - first:
+      213: -5109434578656732128
+    second: PlayButton_17
+  - first:
+      213: 2944464274193401556
+    second: PlayButton_18
+  - first:
+      213: -8076017055241495469
+    second: PlayButton_19
+  - first:
+      213: 7058308168440337736
+    second: PlayButton_20
+  - first:
+      213: -3134224860259817492
+    second: PlayButton_21
+  - first:
+      213: -5275860930473248682
+    second: PlayButton_22
+  - first:
+      213: -3120249526951853165
+    second: PlayButton_23
+  - first:
+      213: 5032296364329246931
+    second: PlayButton_24
+  - first:
+      213: 7511392227646612251
+    second: PlayButton_25
+  - first:
+      213: 6122467970019175829
+    second: PlayButton_26
+  - first:
+      213: 8108414734285258372
+    second: PlayButton_27
+  - first:
+      213: -2273541574863597066
+    second: PlayButton_28
+  - first:
+      213: 3725932300083539679
+    second: PlayButton_29
+  - first:
+      213: -5730378867816037453
+    second: PlayButton_30
+  - first:
+      213: 6027332985747523284
+    second: PlayButton_31
+  - first:
+      213: -3075902016117461053
+    second: PlayButton_32
+  - first:
+      213: 5245680594339047145
+    second: PlayButton_33
+  - first:
+      213: -7980268052535628548
+    second: PlayButton_34
+  - first:
+      213: 9175812178724592935
+    second: PlayButton_35
+  - first:
+      213: -1818768058337637939
+    second: PlayButton_36
+  - first:
+      213: -6090504521511411501
+    second: PlayButton_37
+  - first:
+      213: -3511862716513320639
+    second: PlayButton_38
+  - first:
+      213: -4965449235663031730
+    second: PlayButton_39
+  - first:
+      213: -8276457092622607919
+    second: PlayButton_40
+  - first:
+      213: -1071087613560427874
+    second: PlayButton_41
+  - first:
+      213: 3469216693282459484
+    second: PlayButton_42
+  - first:
+      213: -6208224171810964795
+    second: PlayButton_43
+  - first:
+      213: -4517545484414262454
+    second: PlayButton_44
+  - first:
+      213: -7744457898224860701
+    second: PlayButton_0
+  - first:
+      213: 8630646203168237119
+    second: PlayButton_1
+  - first:
+      213: 7853949232953200825
+    second: PlayButton_2
+  - first:
+      213: 5238747877629530985
+    second: PlayButton_3
+  - first:
+      213: -7836827658538917440
+    second: PlayButton_4
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: PlayButton_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 480
+        width: 320
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e1c65ec298268490800000000000000
+      internalID: -7744457898224860701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayButton_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 360
+        width: 320
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f36aae1aef636c770800000000000000
+      internalID: 8630646203168237119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayButton_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 240
+        width: 320
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b090222735defc60800000000000000
+      internalID: 7853949232953200825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayButton_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 120
+        width: 320
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96390f94075c3b840800000000000000
+      internalID: 5238747877629530985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayButton_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 320
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c1e4de04cefd3390800000000000000
+      internalID: -7836827658538917440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

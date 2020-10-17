@@ -1,11 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
     public float[] goalLevel;
     public int startLevel;
+    public string faseAtual;
+    public string proximaFase;
 
     public TileManager tileManager;
     public PlayerController playerController;
@@ -20,11 +23,17 @@ public class GameManager : MonoBehaviour
     private float cooldownMenu;
     private bool endTileSpawned;
 
+    public GameObject pauseMenu;
+    public GameObject gameOverPanel;
+    public GameObject nextLevelPanel;
+
     // Start is called before the first frame update
     void Start()
     {
         gameState = START_STATE;
         endTileSpawned = false;
+        gameOverPanel.SetActive(false);
+        nextLevelPanel.SetActive(false);
     }
 
     // Update is called once per frame
@@ -60,7 +69,6 @@ public class GameManager : MonoBehaviour
         if (gameState == PAUSE_STATE)
         {
             cooldownMenu -= Time.deltaTime;
-
             if (Input.GetKeyDown(KeyCode.Escape) && cooldownMenu <= 0)// back to game
             {
                 SetPlayGame();
@@ -112,14 +120,16 @@ public class GameManager : MonoBehaviour
         return gameState;
     }
 
-    private void SetPauseGame()
+    public void SetPauseGame()
     {
         gameState = PAUSE_STATE;
+        pauseMenu.SetActive(true);
     }
 
-    private void SetPlayGame()
+    public void SetPlayGame()
     {
         gameState = PLAY_STATE;
+        pauseMenu.SetActive(false);
     }
 
     private void SetStartGame()
@@ -127,14 +137,31 @@ public class GameManager : MonoBehaviour
         gameState = START_STATE;
     }
 
-    private void SetNextLevelGame()
+    public void SetNextLevelGame()
     {
         gameState = NEXTLEVEL_STATE;
+        nextLevelPanel.SetActive(true);
     }
 
     private void SetGameOverGame()
     {
         gameState = GAMEOVER_STATE;
+        gameOverPanel.SetActive(true);
+    }
+
+    public void RestartGame()
+    {
+        SceneManager.LoadScene(faseAtual);
+    }
+
+    public void GoToNextLevel()
+    {
+        SceneManager.LoadScene(proximaFase);
+    }
+
+    public void MainMenu()
+    {
+        SceneManager.LoadScene("Menu");
     }
 
 }
