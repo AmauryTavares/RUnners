@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class BikeController : MonoBehaviour
 {
     public float speed;
@@ -12,10 +13,13 @@ public class BikeController : MonoBehaviour
 
     private GameManager gameManager;
 
+    private AudioSource soundfx;
+ 
     // Start is called before the first frame update
     void Start()
     {
         gameManager = (GameManager)GameObject.Find("GameManager").GetComponent(typeof(GameManager));
+        soundfx = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame

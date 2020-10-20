@@ -125,6 +125,8 @@ MonoBehaviour:
   gameManager: {fileID: 0}
   timeEnergyDrink: 10
   cameraController: {fileID: 0}
+  staminaBar: {fileID: 0}
+  lifesIMG: []
 --- !u!50 &3992457397377337895
 Rigidbody2D:
   serializedVersion: 4
