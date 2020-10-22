@@ -3093,7 +3093,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1811153304}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -1, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1359810892}
@@ -3124,7 +3124,7 @@ MonoBehaviour:
   m_AlphaBlendOnOverlap: 0
   m_ShadowIntensity: 0
   m_ShadowVolumeIntensity: 0
-  m_PointLightInnerAngle: 180
+  m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
   m_PointLightOuterRadius: 8.712142
@@ -3170,15 +3170,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPrefabs:
-  - {fileID: 8721900195058284528, guid: 37164fe9081e8f949808757be273a255, type: 3}
-  - {fileID: 1611773690449972221, guid: e773795b79d56c24bae5b1173067fa16, type: 3}
-  - {fileID: 1585019600351855026, guid: fadedd6fc7fe6bf46976a67b8871997a, type: 3}
-  - {fileID: 3816079865440443529, guid: 9c28b913439ae7545992fabdb8c4f683, type: 3}
-  - {fileID: 6874849226200082117, guid: 12ac38367ac9dc041b2fc829a516415a, type: 3}
-  - {fileID: 5274581673271183188, guid: bdcb09359dc3eaa4fa3044805fc9a3c6, type: 3}
-  - {fileID: 4951036015883604279, guid: 2ea968fa1f838ca4ea78b8c8bdb4ce60, type: 3}
-  - {fileID: 1774619496643069204, guid: 4ae08b159f59fa54395c173e91dfa657, type: 3}
-  - {fileID: 7240657514654584969, guid: 5b4b4cf7bdfa31840a51520568f7e24b, type: 3}
+  - {fileID: 8721900195058284528, guid: 0e8a66ecb3b033d48a95e5802885ca81, type: 3}
+  - {fileID: 1611773690449972221, guid: f0b9992cd2b72c845a3dc77359f2211e, type: 3}
+  - {fileID: 1585019600351855026, guid: 3e5b253291d80ed4495aabfcb6eebd4d, type: 3}
+  - {fileID: 3816079865440443529, guid: f0ff40d8d841aff469b5b821a31038c6, type: 3}
+  - {fileID: 6874849226200082117, guid: ef8c01f7e250b2848b3457d711d96014, type: 3}
+  - {fileID: 5274581673271183188, guid: 08f2a9b7dfcaeab43a613a3461c3fe49, type: 3}
+  - {fileID: 4951036015883604279, guid: b6b1a9772ea651648b16f5693ddc8342, type: 3}
+  - {fileID: 1774619496643069204, guid: 29604c2e676109f4aaf7e336bb958073, type: 3}
+  - {fileID: 7240657514654584969, guid: b6ea0833c6d60a14e86410c474b30b56, type: 3}
   tileClean: {fileID: 6434710563439216646, guid: 1a7947fd4c70f0f4fbbbf6236bbaaeef,
     type: 3}
   tileRestaurant: {fileID: 3133075783533775212, guid: 635bd362c5425fa4796dc9b162766ca7,
