@@ -2,16 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    public float[] goalLevel;
+    public float goalLevel;
     public int startLevel;
     public string faseAtual;
     public string proximaFase;
 
     public TileManager tileManager;
     public PlayerController playerController;
+    public GameObject player;
+
+    public Image progressBar;
 
     private int START_STATE = 0;
     private int PLAY_STATE = 1;
@@ -39,6 +43,8 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        progressBar.fillAmount = player.transform.position.y / goalLevel;
+
         if (gameState == START_STATE)// if game state is start
         {
             if (playerController.GetPlayerLifes() > 0)
@@ -54,7 +60,7 @@ public class GameManager : MonoBehaviour
 
         if (gameState == PLAY_STATE)
         {
-            if (endTileSpawned == false && playerController.GetPlayerPosition() >= goalLevel[startLevel - 1]) // Check if the player has reached the end of the level
+            if (endTileSpawned == false && playerController.GetPlayerPosition() >= goalLevel) // Check if the player has reached the end of the level
             {
                 SpawnEndTile();
             }
