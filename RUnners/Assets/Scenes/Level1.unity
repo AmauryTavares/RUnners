@@ -446,6 +446,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arrow
       objectReference: {fileID: 0}
+    - target: {fileID: 7415783135046762609, guid: 147c1563061b4894981ece52119c54af,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7415783135046762609, guid: 147c1563061b4894981ece52119c54af,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7415783135046762609, guid: 147c1563061b4894981ece52119c54af,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7415783135046762622, guid: 147c1563061b4894981ece52119c54af,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2466,7 +2481,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3ed94b2a0d5e3149b6ce7c849a74364, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  goalLevel: 1500
+  goalLevel: 700
   startLevel: 1
   faseAtual: Level1
   proximaFase: Level2
